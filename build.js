@@ -32,9 +32,7 @@ function copyDir(src, dest) {
 }
 
 // Función para renderizar plantilla EJS simple
-function renderTemplate(templatePath, data) {
-    let content = fs.readFileSync(templatePath, 'utf8');
-    
+function renderTemplate(content, data) {
     // Reemplazar variables simples
     Object.keys(data).forEach(key => {
         const regex = new RegExp(`<%= ${key} %>`, 'g');
@@ -106,10 +104,10 @@ function generateStaticHTML() {
         const htmlContent = layoutContent.replace('<%- body %>', pageContent);
         
         // Reemplazar variables
-        const finalHTML = renderTemplate('temp', {
+        const finalHTML = renderTemplate(htmlContent, {
             title: page.title,
             page: page.page
-        }).replace('temp', htmlContent);
+        });
         
         // Escribir archivo HTML
         const outputPath = path.join('dist', `${page.name}.html`);
