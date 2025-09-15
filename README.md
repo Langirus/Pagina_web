@@ -155,35 +155,61 @@ El proyecto utiliza variables CSS para facilitar la personalización:
 
 ### Opciones de Despliegue
 
-1. **Heroku**:
-   ```bash
-   # Instalar Heroku CLI
-   heroku create tu-portafolio
-   git push heroku main
-   ```
+#### 1. **Netlify (Recomendado para sitios estáticos)**
 
-2. **Vercel**:
-   ```bash
-   # Instalar Vercel CLI
-   npm i -g vercel
-   vercel
-   ```
+**Opción A: Despliegue automático desde GitHub**
+1. Sube tu proyecto a GitHub
+2. Ve a [Netlify](https://netlify.com) y conecta tu repositorio
+3. Configura:
+   - **Build command**: `npm run build`
+   - **Publish directory**: `dist`
+4. ¡Listo! Tu sitio se desplegará automáticamente
 
-3. **Netlify**:
-   - Conecta tu repositorio de GitHub
-   - Configura el build command: `npm install && npm start`
+**Opción B: Despliegue manual**
+```bash
+# Generar archivos estáticos
+npm run build
 
-4. **VPS/Servidor Propio**:
-   ```bash
-   # Instalar PM2 para gestión de procesos
-   npm install -g pm2
-   pm2 start server.js --name "portafolio"
-   ```
+# Subir la carpeta 'dist' a Netlify via drag & drop
+```
+
+#### 2. **Vercel**
+```bash
+# Instalar Vercel CLI
+npm i -g vercel
+
+# Configurar para sitio estático
+vercel --prod
+```
+
+#### 3. **GitHub Pages**
+```bash
+# Generar archivos estáticos
+npm run build
+
+# Subir carpeta 'dist' a la rama 'gh-pages'
+```
+
+#### 4. **Heroku (Para versión con servidor)**
+```bash
+# Instalar Heroku CLI
+heroku create tu-portafolio
+git push heroku main
+```
+
+#### 5. **VPS/Servidor Propio**
+```bash
+# Instalar PM2 para gestión de procesos
+npm install -g pm2
+pm2 start server.js --name "portafolio"
+```
 
 ## 📝 Scripts Disponibles
 
 - `npm start`: Ejecuta el servidor en modo producción
 - `npm run dev`: Ejecuta el servidor en modo desarrollo con nodemon
+- `npm run build`: Genera archivos estáticos para despliegue
+- `npm run preview`: Previsualiza la versión estática localmente
 - `npm test`: Ejecuta las pruebas (configurar según necesidades)
 
 ## 🤝 Contribuciones
