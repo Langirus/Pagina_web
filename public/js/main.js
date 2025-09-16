@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
             // Obtener datos del formulario
@@ -44,9 +44,39 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Simular envío (aquí puedes integrar con tu backend)
-            showNotification('¡Solicitud de consultoría enviada correctamente! Te contactaremos pronto para agendar tu demo gratuita.', 'success');
-            this.reset();
+            try {
+                // Mostrar indicador de carga
+                showNotification('Enviando mensaje...', 'info');
+                
+                // Enviar datos al servidor
+                const response = await fetch('/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name,
+                        company,
+                        position,
+                        email,
+                        service,
+                        message
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    showNotification(result.message, 'success');
+                    this.reset();
+                } else {
+                    showNotification(result.message, 'error');
+                }
+                
+            } catch (error) {
+                console.error('Error:', error);
+                showNotification('Error al enviar el mensaje. Por favor, inténtalo de nuevo.', 'error');
+            }
         });
     }
 });
