@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
+    <title><%= title %> - ORYVIA</title>
+    <meta name="description" content="ORYVIA: Soluciones inteligentes con IA para transformar tu negocio. Desarrollo de software, automatización de procesos e integración de inteligencia artificial.">
     
     <!-- CSS -->
     <link rel="stylesheet" href="/css/style.css">
@@ -19,17 +20,20 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="/">Mi Portafolio</a>
+                <a href="/">
+                    <span class="logo-icon">O</span>
+                    ORYVIA
+                </a>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="/" class="nav-link <%= page === 'home' ? 'active' : '' %>">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/about" class="nav-link <%= page === 'about' ? 'active' : '' %>">Acerca de</a>
+                    <a href="/about" class="nav-link <%= page === 'about' ? 'active' : '' %>">Nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/projects" class="nav-link <%= page === 'projects' ? 'active' : '' %>">Proyectos</a>
+                    <a href="/projects" class="nav-link <%= page === 'projects' ? 'active' : '' %>">Aplicaciones</a>
                 </li>
                 <li class="nav-item">
                     <a href="/contact" class="nav-link <%= page === 'contact' ? 'active' : '' %>">Contacto</a>
@@ -53,33 +57,44 @@
         <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Mi Portafolio</h3>
-                    <p>Desarrollador apasionado por crear soluciones innovadoras.</p>
+                    <h3>
+                        <span class="logo-icon">O</span>
+                        ORYVIA
+                    </h3>
+                    <p>Soluciones inteligentes con IA para transformar tu negocio. Acercamos la inteligencia artificial a las empresas.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Enlaces Rápidos</h4>
                     <ul>
                         <li><a href="/">Inicio</a></li>
-                        <li><a href="/about">Acerca de</a></li>
-                        <li><a href="/projects">Proyectos</a></li>
+                        <li><a href="/about">Nosotros</a></li>
+                        <li><a href="/projects">Aplicaciones</a></li>
                         <li><a href="/contact">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Redes Sociales</h4>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#">Desarrollo de Software</a></li>
+                        <li><a href="#">Integración de IA</a></li>
+                        <li><a href="#">Automatización de Procesos</a></li>
+                        <li><a href="#">Análisis de Datos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> oryvia.empresa@gmail.com</p>
+                        <p><i class="fas fa-clock"></i> Lunes - Viernes: 9:00 - 18:00 (CLT)</p>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Mi Portafolio. Todos los derechos reservados.</p>
+                <p>&copy; 2024 ORYVIA. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
+
 
     <!-- JavaScript -->
     <script src="/js/main.js"></script>
