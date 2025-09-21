@@ -19,58 +19,64 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Filtro de proyectos
-document.addEventListener('DOMContentLoaded', function() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
-    
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const filter = this.getAttribute('data-filter');
-            
-            // Actualizar botones activos
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Filtrar proyectos
-            projectCards.forEach(card => {
-                const category = card.getAttribute('data-category');
-                
-                if (filter === 'all' || category === filter) {
-                    card.style.display = 'block';
-                    card.style.animation = 'fadeIn 0.5s ease-in';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
-    });
-});
+// Filtro de aplicaciones
 
 // Formulario de contacto
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
             // Obtener datos del formulario
             const formData = new FormData(this);
             const name = formData.get('name');
+            const company = formData.get('company');
+            const position = formData.get('position');
             const email = formData.get('email');
-            const subject = formData.get('subject');
+            const service = formData.get('service');
             const message = formData.get('message');
             
             // Validación básica
-            if (!name || !email || !subject || !message) {
+            if (!name || !company || !position || !email || !service || !message) {
                 showNotification('Por favor, completa todos los campos requeridos.', 'error');
                 return;
             }
             
-            // Simular envío (aquí puedes integrar con tu backend)
-            showNotification('¡Mensaje enviado correctamente! Te responderé pronto.', 'success');
-            this.reset();
+            try {
+                // Mostrar indicador de carga
+                showNotification('Enviando mensaje...', 'info');
+                
+                // Enviar datos al servidor
+                const response = await fetch('/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name,
+                        company,
+                        position,
+                        email,
+                        service,
+                        message
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    showNotification(result.message, 'success');
+                    this.reset();
+                } else {
+                    showNotification(result.message, 'error');
+                }
+                
+            } catch (error) {
+                console.error('Error:', error);
+                showNotification('Error al enviar el mensaje. Por favor, inténtalo de nuevo.', 'error');
+            }
         });
     }
 });
@@ -136,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
     
     // Observar elementos animables
-    const animatedElements = document.querySelectorAll('.skill-card, .project-card, .timeline-item, .education-card');
+    const animatedElements = document.querySelectorAll('.service-card, .solution-card, .case-study-card, .approach-card, .team-card, .value-card, .feature-card');
     animatedElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';

@@ -63,31 +63,31 @@ function generateStaticHTML() {
     const pages = [
         {
             name: 'index',
-            title: 'Inicio - Mi Portafolio',
+            title: 'Inicio',
             page: 'home',
             template: 'views/index.ejs'
         },
         {
             name: 'about',
-            title: 'Acerca de Mí - Mi Portafolio',
+            title: 'Acerca de Mí',
             page: 'about',
             template: 'views/about.ejs'
         },
         {
             name: 'projects',
-            title: 'Proyectos - Mi Portafolio',
+            title: 'Proyectos',
             page: 'projects',
             template: 'views/projects.ejs'
         },
         {
             name: 'contact',
-            title: 'Contacto - Mi Portafolio',
+            title: 'Contacto',
             page: 'contact',
             template: 'views/contact.ejs'
         },
         {
             name: '404',
-            title: 'Página no encontrada - Mi Portafolio',
+            title: 'Página no encontrada',
             page: '404',
             template: 'views/404.ejs'
         }

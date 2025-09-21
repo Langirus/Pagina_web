@@ -30,21 +30,21 @@ app.use(express.json());
 // Rutas
 app.get('/', (req, res) => {
   res.render('index', {
-    title: 'Inicio - Mi Portafolio',
+    title: 'Inicio',
     page: 'home'
   });
 });
 
 app.get('/about', (req, res) => {
   res.render('about', {
-    title: 'Acerca de Mí - Mi Portafolio',
+    title: 'Acerca de Mí',
     page: 'about'
   });
 });
 
 app.get('/projects', (req, res) => {
   res.render('projects', {
-    title: 'Proyectos - Mi Portafolio',
+    title: 'Proyectos',
     page: 'projects'
   });
 });
@@ -108,7 +108,7 @@ app.post('/contact', async (req, res) => {
 // Manejo de errores 404
 app.use((req, res) => {
   res.status(404).render('404', {
-    title: 'Página no encontrada - Mi Portafolio',
+    title: 'Página no encontrada',
     page: '404'
   });
 });

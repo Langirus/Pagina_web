@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyectos - Mi Portafolio</title>
+    <title>Proyectos - ORYVIA</title>
+    <meta name="description" content="ORYVIA: Soluciones inteligentes con IA para transformar tu negocio. Desarrollo de software, automatización de procesos e integración de inteligencia artificial.">
     
     <!-- CSS -->
     <link rel="stylesheet" href="/css/style.css">
@@ -19,17 +20,20 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="/">Mi Portafolio</a>
+                <a href="/">
+                    <span class="logo-icon">O</span>
+                    ORYVIA
+                </a>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="/" class="nav-link <%= page === 'home' ? 'active' : '' %>">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/about" class="nav-link <%= page === 'about' ? 'active' : '' %>">Acerca de</a>
+                    <a href="/about" class="nav-link <%= page === 'about' ? 'active' : '' %>">Nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/projects" class="nav-link <%= page === 'projects' ? 'active' : '' %>">Proyectos</a>
+                    <a href="/projects" class="nav-link <%= page === 'projects' ? 'active' : '' %>">Aplicaciones</a>
                 </li>
                 <li class="nav-item">
                     <a href="/contact" class="nav-link <%= page === 'contact' ? 'active' : '' %>">Contacto</a>
@@ -45,170 +49,131 @@
 
     <!-- Contenido principal -->
     <main>
-        <!-- Projects Hero -->
-<section class="projects-hero">
+        <!-- Solutions Hero -->
+<section class="solutions-hero">
     <div class="container">
-        <h1 class="page-title">Mis Proyectos</h1>
+        <h1 class="page-title">Nuestras Soluciones Tecnológicas</h1>
         <p class="lead">
-            Una colección de proyectos que demuestran mis habilidades 
-            y experiencia en desarrollo web.
+            Descubre nuestras 6 soluciones tecnológicas especializadas en IA y automatización 
+            para transformar tu negocio.
         </p>
     </div>
 </section>
 
-<!-- Projects Filter -->
-<section class="projects-filter">
+<!-- Solutions Grid -->
+<section class="solutions">
     <div class="container">
-        <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">Todos</button>
-            <button class="filter-btn" data-filter="web">Web</button>
-            <button class="filter-btn" data-filter="mobile">Mobile</button>
-            <button class="filter-btn" data-filter="fullstack">Full Stack</button>
-        </div>
-    </div>
-</section>
-
-<!-- Projects Grid -->
-<section class="projects-grid-section">
-    <div class="container">
-        <div class="projects-grid">
-            <!-- Proyecto 1 -->
-            <div class="project-card" data-category="fullstack">
-                <div class="project-image">
-                    <i class="fas fa-shopping-cart"></i>
-                </div>
-                <div class="project-content">
-                    <h3>E-commerce Platform</h3>
-                    <p>
-                        Plataforma completa de comercio electrónico con carrito de compras, 
-                        sistema de pagos, gestión de inventario y panel administrativo.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">MongoDB</span>
-                        <span class="tech-tag">Stripe</span>
+        <div class="solutions-grid">
+            <!-- Solución 1 -->
+            <div class="solution-card">
+                <div class="solution-content">
+                    <div class="solution-icon">
+                        <i class="fas fa-comments"></i>
                     </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link"><i class="fab fa-github"></i> Código</a>
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    <h3>Chatbots Inteligentes</h3>
+                    <p>
+                        Diseño e implementación de chatbots con IA para WhatsApp, sitios web y aplicaciones móviles. 
+                        Atención 24/7, soporte automatizado y experiencias personalizadas para clientes.
+                    </p>
+                    <div class="solution-keywords">
+                        <span class="keyword-tag">Atención al cliente</span>
+                        <span class="keyword-tag">Soporte automatizado</span>
+                        <span class="keyword-tag">Conversación natural</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Proyecto 2 -->
-            <div class="project-card" data-category="web">
-                <div class="project-image">
-                    <i class="fas fa-tasks"></i>
-                </div>
-                <div class="project-content">
-                    <h3>Task Management App</h3>
-                    <p>
-                        Aplicación web para gestión de tareas con funcionalidades de 
-                        colaboración en tiempo real, notificaciones y reportes.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Express</span>
-                        <span class="tech-tag">Socket.io</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">Bootstrap</span>
+            <!-- Solución 2 -->
+            <div class="solution-card">
+                <div class="solution-content">
+                    <div class="solution-icon">
+                        <i class="fas fa-sync-alt"></i>
                     </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link"><i class="fab fa-github"></i> Código</a>
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    <h3>Automatización de Procesos con IA</h3>
+                    <p>
+                        Eliminamos tareas repetitivas con bots y flujos automatizados. RPA + IA para optimizar tiempos, 
+                        reducir errores y mejorar la eficiencia operativa.
+                    </p>
+                    <div class="solution-keywords">
+                        <span class="keyword-tag">RPA</span>
+                        <span class="keyword-tag">Workflows</span>
+                        <span class="keyword-tag">Integración de sistemas</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Proyecto 3 -->
-            <div class="project-card" data-category="mobile">
-                <div class="project-image">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-                <div class="project-content">
-                    <h3>Weather App</h3>
-                    <p>
-                        Aplicación móvil para consulta del clima con geolocalización, 
-                        pronósticos extendidos y alertas meteorológicas.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">React Native</span>
-                        <span class="tech-tag">API REST</span>
-                        <span class="tech-tag">AsyncStorage</span>
+            <!-- Solución 3 -->
+            <div class="solution-card">
+                <div class="solution-content">
+                    <div class="solution-icon">
+                        <i class="fas fa-plug"></i>
                     </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link"><i class="fab fa-github"></i> Código</a>
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    <h3>Integración de APIs de IA Generativa</h3>
+                    <p>
+                        Conectamos tu negocio con APIs de IA generativa (como Gemini, GPT o similares) para potenciar 
+                        la productividad: generación automática de reportes, resúmenes, textos o contenido personalizado.
+                    </p>
+                    <div class="solution-keywords">
+                        <span class="keyword-tag">Generación de texto</span>
+                        <span class="keyword-tag">APIs</span>
+                        <span class="keyword-tag">Asistentes virtuales</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Proyecto 4 -->
-            <div class="project-card" data-category="fullstack">
-                <div class="project-image">
-                    <i class="fas fa-blog"></i>
-                </div>
-                <div class="project-content">
-                    <h3>Blog Platform</h3>
-                    <p>
-                        Plataforma de blog con sistema de comentarios, categorías, 
-                        búsqueda avanzada y editor de texto enriquecido.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">EJS</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">Cloudinary</span>
+            <!-- Solución 4 -->
+            <div class="solution-card">
+                <div class="solution-content">
+                    <div class="solution-icon">
+                        <i class="fas fa-chart-bar"></i>
                     </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link"><i class="fab fa-github"></i> Código</a>
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    <h3>Análisis de Datos Inteligente</h3>
+                    <p>
+                        Dashboards interactivos con IA para transformar datos en decisiones. Predicción de tendencias, 
+                        análisis predictivo y visualizaciones claras para directivos.
+                    </p>
+                    <div class="solution-keywords">
+                        <span class="keyword-tag">Business Intelligence</span>
+                        <span class="keyword-tag">Predicción</span>
+                        <span class="keyword-tag">Visualización</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Proyecto 5 -->
-            <div class="project-card" data-category="web">
-                <div class="project-image">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <div class="project-content">
-                    <h3>Analytics Dashboard</h3>
-                    <p>
-                        Dashboard de análisis de datos con gráficos interactivos, 
-                        reportes personalizables y exportación de datos.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Vue.js</span>
-                        <span class="tech-tag">Chart.js</span>
-                        <span class="tech-tag">Firebase</span>
+            <!-- Solución 5 -->
+            <div class="solution-card">
+                <div class="solution-content">
+                    <div class="solution-icon">
+                        <i class="fas fa-code"></i>
                     </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link"><i class="fab fa-github"></i> Código</a>
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    <h3>Desarrollo de Software a Medida</h3>
+                    <p>
+                        Creamos aplicaciones web y móviles personalizadas, seguras y escalables, integrando 
+                        inteligencia artificial desde su diseño.
+                    </p>
+                    <div class="solution-keywords">
+                        <span class="keyword-tag">Web apps</span>
+                        <span class="keyword-tag">Mobile apps</span>
+                        <span class="keyword-tag">Microservicios</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Proyecto 6 -->
-            <div class="project-card" data-category="fullstack">
-                <div class="project-image">
-                    <i class="fas fa-users"></i>
-                </div>
-                <div class="project-content">
-                    <h3>Social Media App</h3>
-                    <p>
-                        Red social con funcionalidades de publicación, likes, 
-                        comentarios, mensajería privada y sistema de amigos.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">MERN Stack</span>
-                        <span class="tech-tag">Socket.io</span>
-                        <span class="tech-tag">JWT</span>
+            <!-- Solución 6 -->
+            <div class="solution-card">
+                <div class="solution-content">
+                    <div class="solution-icon">
+                        <i class="fas fa-users"></i>
                     </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link"><i class="fab fa-github"></i> Código</a>
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    <h3>Capacitaciones en IA y Automatización</h3>
+                    <p>
+                        Entrenamos a equipos en el uso práctico de la IA, automatización y nuevas herramientas digitales. 
+                        Talleres personalizados para que tu empresa adopte la tecnología con confianza.
+                    </p>
+                    <div class="solution-keywords">
+                        <span class="keyword-tag">Formación</span>
+                        <span class="keyword-tag">Talleres</span>
+                        <span class="keyword-tag">Adopción tecnológica</span>
                     </div>
                 </div>
             </div>
@@ -223,33 +188,44 @@
         <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Mi Portafolio</h3>
-                    <p>Desarrollador apasionado por crear soluciones innovadoras.</p>
+                    <h3>
+                        <span class="logo-icon">O</span>
+                        ORYVIA
+                    </h3>
+                    <p>Soluciones inteligentes con IA para transformar tu negocio. Acercamos la inteligencia artificial a las empresas.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Enlaces Rápidos</h4>
                     <ul>
                         <li><a href="/">Inicio</a></li>
-                        <li><a href="/about">Acerca de</a></li>
-                        <li><a href="/projects">Proyectos</a></li>
+                        <li><a href="/about">Nosotros</a></li>
+                        <li><a href="/projects">Aplicaciones</a></li>
                         <li><a href="/contact">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Redes Sociales</h4>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#">Desarrollo de Software</a></li>
+                        <li><a href="#">Integración de IA</a></li>
+                        <li><a href="#">Automatización de Procesos</a></li>
+                        <li><a href="#">Análisis de Datos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> oryvia.empresa@gmail.com</p>
+                        <p><i class="fas fa-clock"></i> Lunes - Viernes: 9:00 - 18:00 (CLT)</p>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Mi Portafolio. Todos los derechos reservados.</p>
+                <p>&copy; 2025 ORYVIA. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
+
 
     <!-- JavaScript -->
     <script src="/js/main.js"></script>
